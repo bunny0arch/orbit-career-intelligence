@@ -4,6 +4,7 @@ import { existsSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { generateCareerBrief } from './ai'
+import { parseCareerBriefRequest } from './request'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(__dirname, '..')
@@ -18,12 +19,12 @@ app.get('/api/health', (_req, res) => res.json({ ok: true, service: 'orbit', tim
 
 app.post('/api/ai/career-brief', async (req, res) => {
   try {
-    const input = req.body as Parameters<typeof generateCareerBrief>[0]
-    if (!input?.name || !input?.targetRole) return res.status(400).json({ error: 'name and targetRole are required' })
+    const input = parseCareerBriefRequest(req.body)
+    if (!input) return res.status(400).json({ error: 'name, targetRole, and roadmap are required' })
     const result = await generateCareerBrief(input)
     res.json(result)
-  } catch (error) {
-    res.status(502).json({ error: error instanceof Error ? error.message : 'AI provider unavailable' })
+  } catch {
+    res.status(502).json({ error: 'AI provider unavailable' })
   }
 })
 
