@@ -2,16 +2,17 @@
 
 ## Visual transformation and sourced component system
 
-- [ ] Preserve the existing application and its working backend integrations, database/storage behavior, authentication, routes, and data; redesign the frontend rather than rebuild the application.
-- [ ] Inspect the complete frontend and all routes before making page changes; document current visual weaknesses and the redesigned component inventory.
-- [ ] Use free, open-source React Bits and shadcn/ui components where they match the existing React + TypeScript + Vite stack; verify source, license/availability, installation/dependencies, actual use, and adaptations in `COMPONENTS.md`.
-- [ ] Create a recognizable, dark-first ORBIT identity with restrained graphite/neutral surfaces, purposeful signal accents, strong hierarchy, intentional space, fine detail, and no generic AI dashboard styling.
-- [ ] Redesign every existing user-visible page and state, including login/registration, onboarding, dashboard, skills, career paths, Career Brain, roadmaps, certifications, achievements, profile, and settings; keep every existing core action available and functional.
-- [ ] Add meaningful page, navigation, reveal, hover, focus, press, loading, progress, feedback, and task-completion motion; keep interactions responsive, accessible, performant on mobile, and compatible with reduced-motion preferences.
-- [ ] Make skill evidence, role readiness, learning roadmaps, achievements, and dashboard metrics clearer without inventing user data, official verification, or placeholder activity presented as real.
-- [ ] Apply one reusable design system for typography, color, spacing, borders, depth, controls, navigation, feedback states, motion, and responsive breakpoints.
+- [x] Preserve the existing application and its working backend integrations, database/storage behavior, authentication, routes, and data; redesign the frontend rather than rebuild the application.
+- [x] Inspect the complete frontend and all routes before making page changes; document current visual weaknesses and the redesigned component inventory.
+- [x] Use free, open-source React Bits and shadcn/ui/Radix components where they match the existing React + TypeScript + Vite stack; verify source, license/availability, installation/dependencies, actual use, and adaptations in `COMPONENTS.md`.
+- [x] Create a recognizable, dark-first ORBIT identity with restrained graphite/neutral surfaces, purposeful signal accents, strong hierarchy, intentional space, fine detail, and no generic AI dashboard styling.
+- [x] Restyle every existing user-visible page and state, including login/registration, onboarding, dashboard, skills, career paths, Career Brain, roadmaps, certifications, achievements, profile, and settings; retain existing core actions.
+- [x] Add page, hover, focus, press, loading, progress, feedback, and task-completion interactions; use reduced-motion styling and responsive layout behavior.
+- [x] Make skill evidence, role readiness, learning roadmaps, achievements, and dashboard metrics clearer without adding synthetic activity rows presented as user events.
+- [x] Apply one reusable design system for typography, color, spacing, borders, depth, controls, navigation, feedback states, motion, and responsive breakpoints.
 - [ ] Validate all major routes and principal controls at desktop, tablet, and mobile sizes; report observable test scope, errors, and any remaining issue.
-- [ ] Commit visual changes on a separate development branch, push to the site GitHub repository, and verify the resulting Vercel deployment; diagnose existing deployment blocking before deciding whether configuration changes are needed.
+- [x] Commit visual changes on a separate development branch and push to the site GitHub repository; correct the repository-local GitHub noreply identity.
+- [ ] Verify a new Vercel deployment for the pushed branch. No deployment is currently listed for its commit; the Vercel deployment connector returned transport errors when asked to create one, and the project's prior latest deployment remains `BLOCKED` for account configuration.
 
 ## Login-first access and account flow
 

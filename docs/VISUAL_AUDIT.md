@@ -37,7 +37,9 @@ Screenshots are in `docs/screenshots/`. The page source remains the authority fo
 
 ## Vercel and Git identity diagnosis
 
-The existing Vercel project is linked to `bunny0arch/orbit-career-intelligence` under the Hobby team `Trinetras`. Its newest historic deployment is `BLOCKED`, with Vercel linking to its account-configuration collaboration troubleshooting. The checked GitHub API did not associate that historical commit author with a GitHub account. The sandbox's inherited Git email was malformed as `1.76206065e+08+bunny0arch@users.noreply.github.com`; the authenticated GitHub account reports numeric ID `176206065`. This checkout now uses the repo-local, verified-format address `176206065+bunny0arch@users.noreply.github.com` and keeps the existing `bunny0arch` name. No global Git config or Vercel account setting was changed. A newly authored commit will be checked for GitHub association before evaluating its deployment result.
+The existing Vercel project is linked to `bunny0arch/orbit-career-intelligence` under the Hobby team `Trinetras`. Its latest recorded deployment remains `BLOCKED`, with Vercel linking to its account-configuration collaboration troubleshooting. The checked GitHub API did not associate that historical commit author with a GitHub account. The sandbox's inherited Git email was malformed as `1.76206065e+08+bunny0arch@users.noreply.github.com`; the authenticated GitHub account reports numeric ID `176206065`. This checkout now uses the repo-local, verified-format address `176206065+bunny0arch@users.noreply.github.com` and keeps the existing `bunny0arch` name. No global Git config or Vercel account setting was changed.
+
+Commit `304b13f06cb95ab8fd0150b658e10b7470e456e2` is pushed on branch `feat/orbit-visual-redesign`. GitHub now associates its author with `bunny0arch`, so the malformed email is corrected for future builds. Vercel's project settings still report the earlier blocked deployment as latest, and a deployment query filtered by the new branch/SHA returned zero results. Attempts through the Vercel deployment connector to create the preview returned transport errors, so no new deployment can honestly be reported as verified. The Vercel team account's GitHub connection/commit authorization still needs inspection in account settings if a branch build remains blocked after this email fix.
 
 ## Screenshots
 
@@ -45,3 +47,7 @@ The existing Vercel project is linked to `bunny0arch/orbit-career-intelligence` 
 - Redesigned login: `docs/screenshots/after-login.png`
 - Redesigned desktop dashboard: `docs/screenshots/after-dashboard-desktop.png`
 - Redesigned mobile dashboard: `docs/screenshots/after-dashboard-mobile.png`
+
+## Git delivery
+
+Pushed branch: `https://github.com/bunny0arch/orbit-career-intelligence/tree/feat/orbit-visual-redesign`. Commit: `304b13f06cb95ab8fd0150b658e10b7470e456e2`. No pull request was created.
