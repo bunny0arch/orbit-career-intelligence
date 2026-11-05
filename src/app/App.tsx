@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { FormEvent, ReactNode } from 'react'
 import {
-  Activity, ArrowUpRight, Award, BarChart3, Bell, Brain, BriefcaseBusiness, Check, ChevronRight, CircleHelp, Compass,
-  FileCheck2, Flag, GraduationCap, LayoutDashboard, LockKeyhole, Menu, Minus, Plus, RefreshCw, Search, Settings2,
+  Activity, ArrowUpRight, Award, BarChart3, Bell, Brain, BriefcaseBusiness, Check, ChevronRight, CircleHelp,
+  FileCheck2, GraduationCap, LockKeyhole, Menu, Minus, Plus, RefreshCw, Search, Settings2,
   ShieldCheck, Sparkles, Target, TrendingUp, Trophy, UserRound, X, Zap,
 } from 'lucide-react'
 import { motion } from 'motion/react'
@@ -14,20 +14,7 @@ import { createDefaultState, getSkillLevel, roles } from '../data/seed'
 import { evidenceBackedCoverage, priorityGaps, scoreRole, strongestSkills } from '../lib/scoring'
 import { clearSession, currentSession, hasSession, loadState, saveSession, saveState } from '../lib/storage'
 import type { CareerRole, OrbitState, Skill } from '../lib/types'
-
-const navItems = [
-  { path: '/', label: 'Dashboard', icon: LayoutDashboard },
-  { path: '/skills', label: 'My Skills', icon: Activity },
-  { path: '/career-paths', label: 'Career Paths', icon: Compass },
-  { path: '/career-brain', label: 'Career Brain', icon: Brain },
-  { path: '/roadmaps', label: 'Roadmaps', icon: Flag },
-  { path: '/certifications', label: 'Certifications', icon: GraduationCap },
-  { path: '/achievements', label: 'Achievements', icon: Trophy },
-]
-
-function formatPath(path: string) {
-  return path === '/' ? 'Dashboard' : navItems.find(item => item.path === path)?.label || path.replace('/', '')
-}
+import { formatPath, navItems } from './navigation'
 
 function useToast() {
   const [message, setMessage] = useState('')
