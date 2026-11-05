@@ -19,6 +19,14 @@ The current preview includes login-first access, simple registration, onboarding
 
 Preview state is local and demo-safe. It is not official VFSTR data, not a hiring prediction, and not certification verification. Production Supabase Auth username mapping, RLS-backed repositories, private proof storage, live RAG ingestion, verified opportunity feeds, and admin/reviewer workflows are documented in `docs/IMPLEMENTATION_NOTES.md` and are not represented as completed.
 
+## Deployment boundary
+
+The frontend is built as a Vite bundle for Vercel. The Career Brain and health endpoints are also exposed as Vercel serverless functions under `api/`, so deployed builds keep the same provider routing and safe fallback behavior as the local Express runtime. Provider keys must be configured as server-side Vercel environment variables; they are never `VITE_*` variables.
+
 ## Sources
 
 See `COMPONENTS.md` for React Bits, shadcn/ui/Radix, and Lucide source URLs, licenses, dependencies, adaptations, and usage.
+
+## Engineering audit
+
+The approved structural rewire, dependency boundary, MCP toolkit decision, and deferred infrastructure work are recorded in [`docs/PHASE_1_REWIRE.md`](docs/PHASE_1_REWIRE.md).
