@@ -1,0 +1,8 @@
+.animated-list { display: flex; flex-direction: column; gap: 8px; }
+.animated-list__item { display: flex; align-items: center; gap: 12px; width: 100%; padding: 10px 12px; border: 1px solid rgba(255,255,255,.07); border-radius: 12px; background: #171a18; color: #f2f3ee; text-align: left; cursor: pointer; transition: border-color .18s ease, background .18s ease; }
+.animated-list__item:hover { border-color: rgba(200,241,105,.35); background: #1b201d; }
+.animated-list__lead { display: grid; place-items: center; width: 32px; height: 32px; flex: none; border-radius: 9px; background: rgba(200,241,105,.12); color: #c8f169; }
+.animated-list__text { display: flex; min-width: 0; flex: 1; flex-direction: column; gap: 2px; }
+.animated-list__text strong { overflow: hidden; font-size: 13px; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; }
+.animated-list__text small { overflow: hidden; color: #858e86; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+.animated-list__meta { flex: none; color: #717a72; font-size: 11px; font-variant-numeric: tabular-nums; }

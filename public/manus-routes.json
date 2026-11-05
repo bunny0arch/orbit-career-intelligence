@@ -1,0 +1,13 @@
+{
+  "routes": [
+    { "path": "/", "title": "Orbit Dashboard" },
+    { "path": "/skills", "title": "My Skills" },
+    { "path": "/career-paths", "title": "Career Paths" },
+    { "path": "/career-brain", "title": "Career Brain" },
+    { "path": "/roadmaps", "title": "Roadmaps" },
+    { "path": "/certifications", "title": "Certifications" },
+    { "path": "/achievements", "title": "Achievements" },
+    { "path": "/profile", "title": "Profile" },
+    { "path": "/settings", "title": "Settings" }
+  ]
+}
