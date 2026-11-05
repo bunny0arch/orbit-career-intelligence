@@ -58,6 +58,26 @@ The initial release will ship the dashboard as the product's strongest end-to-en
 
 React Bits is the primary source for motion and interface patterns. shadcn/ui and Radix primitives cover accessible structural controls where React Bits does not provide a suitable copyable primitive. Lucide supplies the open-source icon set. The exact selections, URLs, licenses, dependencies, adaptations, and feature usage are recorded in `COMPONENTS.md`.
 
+## Visual transformation plan — 2026-11-05
+
+### Audit findings
+
+The existing app has nine implemented page routes: login/register and three-step onboarding are gates rather than routes; authenticated pages are Dashboard, Skills, Career Paths, Career Brain, Roadmaps, Certifications, Achievements, Profile, and Settings. Navigation is hand-rolled with History API and mobile horizontal navigation. There is no router dependency. State is localStorage-backed; Career Brain calls `/api/ai/career-brief`; role readiness is deterministic in `src/lib/scoring.ts`. No persistence/auth/database behavior is to be changed as part of this visual pass.
+
+The current surface already has a dark graphite and signal-lime direction, Radix tabs/progress, Motion animations, React Bits AnimatedList, and bespoke domain content. Weak points are repetitive rectangular panels, an all-static skill-bar visualization, hard-coded recent-activity rows that look like real user events, limited navigation/page transitions, and low differentiation between page surfaces. The login/onboarding flow is intentional and remains; it is not to be removed or replaced with a public marketing template.
+
+### Chosen visual treatment
+
+Keep the existing quiet-orbital-atelier identity and sharpen it into an evidence-led field-notes instrument. Use a deep graphite surface, subtle technical grid/registration marks, paper-like surface separation without glassmorphism, lime only for actionable/confirmed signal, amber for incomplete evidence, and restrained metallic gold for earned milestones. Use page-specific information hierarchy rather than repeating dashboard-card grids. Interactions should reveal focus/proximity, clarify state changes, and honor reduced-motion preferences.
+
+Integrate the official free React Bits SpotlightCard source into selected high-value interactive surfaces while retaining the already-integrated AnimatedList for actual activity only. Keep accessible Radix primitives already in the repo where they provide shadcn-style behavior; source shadcn/ui copyable controls only when they fit the existing stack without introducing an incompatible global CSS framework. Use existing Motion for short route entrances and transitions. Do not add decorative effects on every surface or invent user records.
+
+### Project structure and implementation boundaries
+
+Keep the existing project structure: `src/app/App.tsx` owns all current route/page composition and domain interactions; `src/components/ui/` owns source-attributed reusable UI primitives; `src/styles/global.css` owns design tokens, composition styles, responsive states, and reduced-motion behavior; `public/manus-routes.json` remains the route declaration. `server/`, `src/lib/`, `src/data/`, authentication/session logic, API contracts, scoring, and storage behavior are outside the redesign except where a visible false claim must be removed.
+
+The separate `orbit-mcp-toolkit` repository is a security-conscious documentation/setup record, not the site source and not an implementation repository. It remains read-only for this site task; the site repo will carry the component inventory and implementation notes.
+
 ## Delivery boundary
 
 P0 product surfaces are implemented in this first pass. A production-grade username-to-Supabase-Auth mapping, private proof storage, RLS migrations, live source-grounded RAG ingestion, verified opportunity feeds, and reviewer/admin workflows remain documented as next integrations unless the managed project exposes the required resources during implementation. The UI does not label local/demo records as official institutional data.
