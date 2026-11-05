@@ -13,15 +13,26 @@ Orbit uses copyable/free sources for standard interface and motion patterns. App
 - **Modifications:** Replaced the example file icons with Orbit evidence icons, removed the file-manager defaults, and kept the source interaction pattern focused on real activity records.
 - **Features:** Dashboard recent activity.
 
-## Sidebar composition
+## SpotlightCard
 
-- **Provider:** shadcn/ui, using Radix composition patterns
-- **Source:** https://ui.shadcn.com/docs/components/radix/sidebar
-- **License/conditions:** shadcn/ui components are copyable open code; the shadcn/ui repository is MIT-licensed. Radix primitives are MIT-licensed.
-- **Installation/dependencies:** Orbit uses the documented composition approach for the responsive navigation shell and installs Radix Tabs/Progress primitives for accessible behavior.
-- **Location:** `src/app/App.tsx`, `src/components/ui/Tabs.tsx`, `src/components/ui/ProgressBar.tsx`
-- **Modifications:** The sidebar is adapted to Orbit's fixed desktop rail and mobile horizontal navigation; controls use Orbit tokens and route state.
-- **Features:** Authenticated shell, dashboard, responsive navigation.
+- **Provider:** React Bits, free copyable source (`ts-default` variant).
+- **Source:** https://reactbits.dev/components/spotlight-card
+- **Implementation source:** https://github.com/DavidHDev/react-bits/tree/main/src/ts-default/Components/SpotlightCard
+- **License/conditions:** MIT + Commons Clause License Condition v1.0 (see https://github.com/DavidHDev/react-bits/blob/main/LICENSE.md). The component may be used as part of the ORBIT website/product; do not sell, sublicense, or redistribute the component itself as a standalone component or bundle.
+- **Installation/dependencies:** Copied from the official TypeScript source; no new runtime package. Uses the project's existing React and CSS build.
+- **Location:** `src/components/ui/spotlight-card/SpotlightCard.tsx`, `src/components/ui/spotlight-card/SpotlightCard.css`.
+- **Modifications:** Component source retained, color and size props configured to ORBIT's restrained lime signal, effects limited to two dashboard evidence panels, component padding/radius aligned to ORBIT's rectangular surfaces. Reduced-motion CSS suppresses animated spotlight details.
+- **Features:** Pointer-proximity lighting and focus-visible response on career readiness and Skill Genome panels.
+
+## Radix primitives / shadcn/ui composition patterns
+
+- **Provider:** Radix UI primitives, aligned to shadcn/ui's copyable composition model; the site's shell itself is ORBIT-specific, not a copied shadcn Sidebar component.
+- **Sources:** https://ui.shadcn.com/docs/components/base/tabs, https://ui.shadcn.com/docs/components/base/progress, https://www.radix-ui.com/primitives/docs/components/progress
+- **License/conditions:** shadcn/ui source is MIT-licensed; the installed Radix primitives are MIT-licensed.
+- **Installation/dependencies:** Existing project dependencies `@radix-ui/react-tabs` and `@radix-ui/react-progress`; no CSS framework migration.
+- **Location:** `src/components/ui/Tabs.tsx`, `src/components/ui/ProgressBar.tsx`, `src/app/App.tsx`.
+- **Modifications:** Small typed wrappers and ORBIT token styles; the current responsive sidebar/mobile navigation remains app-specific.
+- **Features:** Accessible progress indicator used throughout app; tab primitive available for accessible tabbed content.
 
 ## Tabs and Progress
 
