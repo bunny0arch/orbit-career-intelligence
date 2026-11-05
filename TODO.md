@@ -68,3 +68,8 @@
 - [ ] Private certification/evidence storage and production RLS migrations against a dedicated Orbit Supabase schema.
 - [ ] Live source-grounded RAG ingestion/citation validation and verified opportunity ingestion.
 - [ ] Reviewer/admin console, notifications, advanced adaptive assessments, and Android client.
+
+## Next-agent handoff
+
+- [ ] Follow [`TODO_NEXT_AGENT.md`](TODO_NEXT_AGENT.md) for the MCP toolkit restoration boundary, structural extraction, free component discovery, animated UI rollout, and validation outcomes.
+- [ ] Use [`NEXT_AGENT_PROMPT.md`](NEXT_AGENT_PROMPT.md) as the continuation brief for the next development agent.

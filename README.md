@@ -30,3 +30,5 @@ See `COMPONENTS.md` for React Bits, shadcn/ui/Radix, and Lucide source URLs, lic
 ## Engineering audit
 
 The approved structural rewire, dependency boundary, MCP toolkit decision, and deferred infrastructure work are recorded in [`docs/PHASE_1_REWIRE.md`](docs/PHASE_1_REWIRE.md).
+
+The next implementation outcomes are tracked in [`TODO_NEXT_AGENT.md`](TODO_NEXT_AGENT.md), and the ready-to-use continuation brief is in [`NEXT_AGENT_PROMPT.md`](NEXT_AGENT_PROMPT.md).
