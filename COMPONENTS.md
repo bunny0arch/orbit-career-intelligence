@@ -46,3 +46,22 @@ Orbit uses copyable/free sources for standard interface and motion patterns. App
 ## Custom Orbit compositions
 
 `OrbitMark`, the domain cards, forms, role comparison, evidence ladder, and roadmap timeline are application-specific because no sourced component captures the product's evidence semantics. They use the sourced primitives and documented interaction patterns rather than replacing them with decorative copies.
+
+## Button, form, card, and badge primitives
+
+- **Provider:** shadcn/ui composition patterns, adapted to the existing Orbit CSS token system.
+- **Source:** https://ui.shadcn.com/docs/components/button, https://ui.shadcn.com/docs/components/input, https://ui.shadcn.com/docs/components/card, https://ui.shadcn.com/docs/components/badge
+- **License/conditions:** shadcn/ui components are copyable open code; the source repository is MIT-licensed. No shadcn runtime package is shipped.
+- **Location:** `src/components/ui/button.tsx`, `src/components/ui/form.tsx`, `src/components/ui/card.tsx`, `src/lib/utils.ts`
+- **Modifications:** Replaced Tailwind utility composition with Orbit's existing CSS tokens and a small local `cn` helper; kept native HTML semantics and ref forwarding.
+- **Features:** Login/register controls, dashboard readiness card, profile action, accessible form inputs, status metadata.
+
+## Spotlight card
+
+- **Provider:** React Bits
+- **Source:** https://reactbits.dev/components/spotlight-card
+- **Implementation reference:** React Bits spotlight-card pointer tracking pattern, adapted into `src/components/ui/SpotlightCard.tsx`.
+- **License/conditions:** React Bits publishes components under MIT with Commons Clause condition v1.0. The component can be used in the application, but the component itself must not be sold, sublicensed, redistributed alone, or offered as a substantially similar hosted service.
+- **Location:** `src/components/ui/SpotlightCard.tsx`, `src/styles/global.css`
+- **Modifications:** Uses CSS custom properties for pointer position and Orbit's lime/dark palette; includes a reduced-motion fallback and no runtime package.
+- **Features:** Pointer-responsive login panel surface; ready for dashboard cards where the effect clarifies focus rather than acting as decoration.

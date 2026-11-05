@@ -2,6 +2,8 @@
 
 This checklist starts after commit `d19940f` on `chore/phase-1-structural-rewire`. Work on a new branch from the latest remote development branch and preserve the verified prototype behavior.
 
+**Progress update:** The initial shadcn/ReactBits integration batch is now complete on this branch. Orbit has local Button, Input, Label, Card, Badge, and SpotlightCard primitives, with login/register and dashboard readiness/profile actions migrated first. The remaining route-wide extraction and animation rollout stays open below.
+
 ## 1. Restore and use the MCP toolkit safely
 
 - [ ] Read `orbit-mcp-toolkit/docs/MCP_TOOLKIT.md`, `SETUP_GUIDE.md`, `PROJECT_RULES.md`, and `SOURCE_RESEARCH.md` before using connector tooling.
